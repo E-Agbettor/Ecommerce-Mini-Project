@@ -131,9 +131,29 @@ header .navigation li span{
 }
 
 /* cart style */
-.submenu {
-    position: relative;
+.cart-width {
+    width: 100%;
+    box-sizing: border-box; }
+.menu {
+    position: relative; 
 }
+.menu #shopping-cart{
+    display: none; 
+}
+.menu:hover #shopping-cart{
+    display: block;
+    position: absolute;
+    right:0;
+    top:100%;
+    z-index: 1;
+    background-color:var(--secondary);
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+    /* border: 1px solid var(--text-color); */
+    box-shadow: 0 5px 35px rgba(0,0,0,0.3);
+}
+
 .button{
     display: inline-block;
     height: 38px;
