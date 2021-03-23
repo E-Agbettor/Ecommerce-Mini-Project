@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>SerwaaTech</title>
+    
+</head>
+<body>
+    <header class="product-details">
+        <a href="#" class="logo">Serwaa<span>Tech.</span></a>
+        <ul class="navigation">
+            <li><a href="index.html#banner">Home</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="index.html#shop">Shop</a></li>
+            <li><a href="index.html">Testimonial</a></li>
+            <li><a href="index.html#about">About</a></li>
+        </ul>
+        <div class="">
+            <ul>
+               <li class="menu">
+                   <img src="asset/img/cart.png" alt="">
+                   <span>(1)</span>
+                <div id="shopping-cart">
+                    <table id="cart-content" class="cart-width">
+                         <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <a href="#" id="clear-cart" class="button u-full-width">View Cart & Checkout</a>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="product-details-section">
+        <div class="breadcrumb">
+            <a href="">Home ></a> 
+            <a href="">Shop ></a> 
+            <a href="">Smartphones ></a>
+            <a href="">Infinix</a>
+        </div>
+        <div class="details">
+            <div class="details-thumbnail">
+                <div class="details-thumbnail-box">
+                    <img src="asset/img/img-display-1.jpg" alt="">
+                </div>
+                <div class="details-thumbnail-box">
+                    <img src="asset/img/img-display-2.jpg" alt="">
+                </div>
+                <div class="details-thumbnail-box">
+                    <img src="asset/img/img-infinix-display-3.jpg" alt="">
+                </div> 
+            </div>
+            <div class="details-showcase-box">
+                
+                    <img src="asset/img/img-infinix-display-3.jpg" alt="">
+                
+            </div>
+            <div class="details-showcase-info">
+                <h1>Infinix Note 8 pro</h1>
+                <h5>GHC 1299.99 <span><del>1599.99</del></span></h5> 
+                <div class="color-box">
+                    <h6>Color: <span>Blue-Gray</span></h6>
+                    <div class="color"></div>
+                </div>
+                <div class="size">
+                    <h6>Memory size: <span>Select size</span></h6>
+                    <div class="size-box">16Gb</div>
+                    <div class="size-box">32Gb</div>
+                    <div class="size-box">64Gb</div>
+                    <div class="size-box">128Gb</div>
+                    <div class="size-box">256Gb</div>
+                    <div class="button-box">
+                        <div class="button-minus">-</div>
+                        <div class="button-count">1</div>
+                        <div class="button-plus">+</div>
+                    </div>
+                </div>
+                <a href="" class="btn-cart">add to cart</a> <br>
+                <a href="" class=" btn-cart btn-view-cart">view cart</a>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+    </script>
+    <script src="script/script.js"></script>
+</body>
+</html>
