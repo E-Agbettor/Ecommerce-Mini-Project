@@ -7,37 +7,39 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>SerwaaTech</title>
+    <title>Product Details</title>
     
 </head>
 <body>
     <header class="product-details">
-        <a href="#" class="logo">Serwaa<span>Tech.</span></a>
+        <a href="index.html#banner" class="logo">Serwaa<span>Tech.</span></a>
         <ul class="navigation">
             <li><a href="index.html#banner">Home</a></li>
-            <li><a href="index.html#products">Products</a></li>
+            <li><a href="index.html#products">Trending</a></li>
             <li><a href="index.html#shop">Shop</a></li>
-            <li><a href="index.html">Testimonial</a></li>
             <li><a href="index.html#about">About</a></li>
         </ul>
+
+        <!-- add to cart nav bar -->
         <div class="">
             <ul>
                <li class="menu">
                    <img src="asset/img/cart.png" alt="">
-                   <span>(1)</span>
+                   <span></span>
                 <div id="shopping-cart">
                     <table id="cart-content" class="cart-width">
                          <thead>
                             <tr>
                                 <th>Image</th>
                                 <th>Name</th>
+                                <th>Qty</th>
                                 <th>Price</th>
-                                <th></th>
+                                <th>Total</th>
                             </tr>
                         </thead>
                         <tbody></tbody>
                     </table>
-                    <a href="#" id="clear-cart" class="button u-full-width">View Cart & Checkout</a>
+                    <a href="view-cart.html" target="_blank" id="view-cart" class="button">View Cart & Checkout</a>
                 </div>
             </li>
             </ul>
@@ -63,11 +65,11 @@
                     <img src="asset/img/img-infinix-display-3.jpg" alt="">
                 </div> 
             </div>
+            
             <div class="details-showcase-box">
-                
-                    <img src="asset/img/img-infinix-display-3.jpg" alt="">
-                
+                <img src="asset/img/img-infinix-display-3.jpg" alt="">
             </div>
+
             <div class="details-showcase-info">
                 <h1>Infinix Note 8 pro</h1>
                 <h5>GHC 1299.99 <span><del>1599.99</del></span></h5> 
@@ -83,13 +85,35 @@
                     <div class="size-box">128Gb</div>
                     <div class="size-box">256Gb</div>
                     <div class="button-box">
-                        <div class="button-minus">-</div>
-                        <div class="button-count">1</div>
-                        <div class="button-plus">+</div>
-                    </div>
+                        <div id="button-minus" class="button-minus ">-</div>
+                        <div id="button-count" class="button-count">1</div>
+                        <div id="button-plus" class="button-plus">+</div>
+                    </div><br>
                 </div>
-                <a href="" class="btn-cart">add to cart</a> <br>
-                <a href="" class=" btn-cart btn-view-cart">view cart</a>
+                <a class="btn-cart" id="btn-cart">add to cart</a> <br>
+            
+                <section>
+                    
+                        <ul>
+                           <li class="sidebar-menu">
+                            <div id="shopping-cart-sidebar">
+                                <table id="cart-content" class="cart-width">
+                                     <thead>
+                                        <tr>
+                                            <th>Image</th>
+                                            <th>Name</th>
+                                            <th>Qty</th>
+                                            <th>Unit Price</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </li>
+                        </ul>
+                </section>
+
             </div>
         </div>
     </section>

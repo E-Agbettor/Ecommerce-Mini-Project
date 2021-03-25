@@ -1,26 +1,51 @@
 //variables
-const products = document.querySelector('#products-list');
-const shoppingCartContent = document.querySelector('#cart-content tbody')
+let products = document.querySelector('#products-list');
+let shoppingCartContent = document.querySelector('#cart-content tbody');
+let showShoppingCart = document.getElementById('#shopping-cart');
+let shoppingCartQty = document.querySelector('#shoppingCartQty')
+let productCount = 1;
+let  buttonPlus = document.querySelector('#button-plus');
+let  buttonMinus = document.querySelector('#button-minus');
+let  buttonCount = document.querySelector('#button-count');
+let  btnCart = document.querySelector('#btn-cart');
+let  sideShoppingCart = document.querySelector('#shopping-cart-sidebar');
+;
+    
+ btnCart.addEventListener('click', function(){
+         sideShoppingCart.style.display = "block";
+ });
+  
+/* buttonPlus.addEventListener('click', function(){
+    buttonCount.innerText= productCount++;
+}); 
 
+buttonMinus.addEventListener('click', function(){
+     if(count > 0){
+         buttonCount.innerText= productCount--;
+     }
+});  */
 
 
 // eventListeners
-loadListeners();
+// loadListeners();
 
-function loadListeners(){
-    // add new product
-    products.addEventListener('click', buyProduct);
+// function loadListeners(){
+    //view cart sliding from left
+    
+     // add new product
+     products.addEventListener('click', buyProduct);
 
     //document ready
     document.addEventListener('DOMContentLoaded', getFromLocalStorage);
-}
+//  }
 
 
 
 //functions 
-function buyProduct(e){
-    e.preventDefault();
 
+function buyProduct(e){
+    // e.preventDefault();
+    
     //find product
     if(e.target.classList.contains('add-to-cart')){
         const product = e.target.parentElement.parentElement;
@@ -28,14 +53,17 @@ function buyProduct(e){
         // read the values
         getProductInfo(product);
     }
+   
 }
 
 //reads the html info of the selected course
 function getProductInfo(product){
+    
     const productInfo = {
         image: product.querySelector('img').src,
         title: product.querySelector('h3').textContent,
         price: product.querySelector('h5').textContent,
+        quantity:shoppingCartQty.innerText = productCount++,
         id: product.querySelector('a').getAttribute('data-id')
     }
     addIntoCart(productInfo);
@@ -44,7 +72,7 @@ function getProductInfo(product){
 function addIntoCart(product){
     // create a row
     const row = document.createElement('tr');
-
+    
     // cart template
     row.innerHTML = `
         <tr>
@@ -58,13 +86,15 @@ function addIntoCart(product){
                 ${product.price}
             </td>
             <td>
-                <a href="#" class="remove" data-id="${product.image}">
+                ${product.quantity}
+            </td>
+            <td>
+                <a href="#" class="remove" data-id="${product.id}">
             </td>
         </tr>
     `;
     // add to cart
     shoppingCartContent.appendChild(row);
-
     //save to localStorage
     saveIntoStorage(product);
 }
@@ -119,3 +149,4 @@ function getFromLocalStorage(){
         shoppingCartContent.appendChild(row);
     });
 }
+ 
